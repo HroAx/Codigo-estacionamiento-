@@ -1,0 +1,29 @@
+
+package examenpoo2;
+
+import java.util.Scanner;
+
+public class ExamenPOO2 {
+
+
+    public static void main(String[] args) {
+        Scanner entradaTeclado= new Scanner (System.in);
+        System.out.println("Ingrese el ancho del terreno en metros:");
+        double ancho= entradaTeclado.nextDouble();
+       
+        System.out.println("Ingrese el largo del terreno:");
+        double largo= entradaTeclado.nextDouble();
+        
+        System.out.println("Ingrese el precio por metro cuadrado:");
+        double precio= entradaTeclado.nextDouble();
+        
+        Terreno ArTerreno = new Terreno(ancho, largo, precio);
+        System.out.println(" RESULTADOS DEL TERRENO:");
+        System.out.println("El area total es de: " + ArTerreno.calcularArea() + " metros cuadrados.");
+        System.out.println("El precio total del terreno es: $" + ArTerreno.calcularPrecioTotal());
+
+     
+    entradaTeclado.close(); 
+        
+    }
+}
